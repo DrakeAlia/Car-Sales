@@ -29,7 +29,7 @@ export const reducer = (state = initialState, action) => {
                 additionalPrice: state.additionalPrice + action.payload.price, // Sums the added item's price to the current additional price value
                 car: {
                     ...state.car, // goes through the state data of the properties in the car object and copies it
-                    features: state.car.features.concat(action.payload) // Adds the new action.payload/item to features
+                    features: state.car.features.concat(action.payload) // adds the new action.payload/item to features
                 },
                 additionalFeatures: state.additionalFeatures.filter( // removes the item just added to features from additionalFeatures that can be added
                     item => item !== action.payload // only adds items to additionalFeatures that don't match the item that was just added to features
